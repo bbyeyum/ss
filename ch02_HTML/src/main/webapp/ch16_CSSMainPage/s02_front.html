@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IT Blog</title>
+<style type="text/css">
+/*기본 설정*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
+	width: 960px;
+	margin: 0 auto;
+	background: #E6E6E6;
+}
+#page_wrap{
+	background: white;
+	margin: 40px 0;
+	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+/*헤더 구성하기*/
+#main_header{
+	padding: 40px 50px;
+}
+.master-title{
+	font-size: 30px;
+	color: #181818;
+}
+.master-desc{
+	font-size: 15px;
+	font-weight: 500;
+	color: #383838;
+}
+/*내비게이션 및 풀다운 메뉴 구성하기*/
+#main_nav{
+	border-top: 1px solid #c8c8c8;
+	border-bottom: 1px solid #c8c8c8;
+	margin-bottom: 20px;
+	height: 40px;
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+
+/*메뉴 타이틀*/
+.menu-title{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	padding: 5px 20px;
+}
+/*메뉴를 가로 방향으로 배치*/
+.outer-menu-item{
+	float: left;
+	position: relative;
+}
+/*메뉴 위에 커서를 올려놓았을 때 스타일*/
+.outer-menu-item:hover{
+	background: black;
+	color: white;
+}
+/*커서를 메뉴에 올려 놓았을 때 하위 메뉴 설정*/
+.outer-menu-item:hover .inner-menu{
+	display: block; /*하위 메뉴 노출*/
+}
+
+/*기본 하위 메뉴 설정*/
+.inner-menu{
+	display: none; /*하위 메뉴 숨기기*/
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	background: white;
+	box-shadow: 0 2px 6px rgba(5,5,5,0.9);
+	z-index: 100; 
+	text-align: center;
+}
+/*하위 메뉴 링크에 스타일 적용*/
+.inner-menu-item > a{
+	display: block;
+	padding: 5px 10px;
+	color: black;
+}
+
+.inner-menu-item > a:hover{
+	background: black;
+	color: white;
+}
+
+
+
+/*커서 처리*/
+.outer-menu-item, .input-search-submit{
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+	<!-- 내비게이션 시작 -->
+	<nav id="main_nav">
+		<!-- 메뉴 시작  -->
+		<div class="pull-left">
+			<!-- main 메뉴 -->
+			<ul class="outer-menu">
+				<li class="outer-menu-item">
+					<span class="menu-title">HTML5</span>
+					<!-- sub 메뉴 -->
+					<ul class="inner-menu">
+						<li class="inner-menu-item"><a href="#">태그</a></li>
+						<li class="inner-menu-item"><a href="#">속성</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title">CSS3</span>
+					<!-- sub 메뉴 -->
+					<ul class="inner-menu">
+						<li class="inner-menu-item"><a href="#">선택자</a></li>
+						<li class="inner-menu-item"><a href="#">속성</a></li>
+						<li class="inner-menu-item"><a href="#">박스</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title">JavaScript</span>
+					<!-- sub 메뉴 -->
+					<ul class="inner-menu">
+						<li class="inner-menu-item"><a href="#">변수</a></li>
+						<li class="inner-menu-item"><a href="#">자료형</a></li>
+						<li class="inner-menu-item"><a href="#">연산자</a></li>
+						<li class="inner-menu-item"><a href="#">제어문</a></li>
+						<li class="inner-menu-item"><a href="#">함수</a></li>
+						<li class="inner-menu-item"><a href="#">배열</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- 메뉴 끝 -->
+		<!-- 검색 시작 -->
+		<div class="pull-right">
+			<div class="search-bar">
+				<form>
+					<input type="search" class="input-search">
+					<input type="submit" class="input-search-submit" value="검색">
+				</form>
+			</div>
+		</div>
+		<!-- 검색 끝 -->
+	</nav>
+	<!-- 내비게이션 끝 -->
+
+</body>
+</html>
