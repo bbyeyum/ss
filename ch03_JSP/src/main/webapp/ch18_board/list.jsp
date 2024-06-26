@@ -3,7 +3,7 @@
 <%@ page import="kr.board.dao.BoardDAO" %>
 <%@ page import="kr.board.vo.BoardVO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="kr.spring.util.PagingUtil" %>
+<%@ page import="kr.util.PagingUtil" %>
 <%
 	//선택한 페이지 번호
 	String pageNum = request.getParameter("pageNum");

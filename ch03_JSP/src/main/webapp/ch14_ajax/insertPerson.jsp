@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/plain; charset=UTF-8"
     pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-<%@ page import="kr.spring.util.DBUtil" %>
+<%@ page import="kr.util.DBUtil" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.PreparedStatement"%>
 <%
